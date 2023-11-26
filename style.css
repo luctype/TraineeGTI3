@@ -29,12 +29,13 @@ body {
 #poke_container {
   width: 180vh;
   margin: 0 auto;
-  display: flex;
   flex-direction: row;
   justify-content: space-around;
   flex-wrap: wrap;
   border: 1px solid #ccc;
   background-color: white;
+  display: grid;
+  grid-template-columns: repeat(5, 1fr);
 }
 .pokemon-card {
   width: 100%;
@@ -54,8 +55,10 @@ li {
 #botao {
   width: 100%;
   margin: 0 auto;
-  align-items: center;
   text-align: center;
+  display: flex;
+  justify-content: space-around;
+  padding-top: 10px;
 }
 #botao_pag {
   height: 35px;

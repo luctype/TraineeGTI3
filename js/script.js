@@ -38,13 +38,15 @@ async function createCards(x, y) {
   return cards;
 }
 
-let inputElement = document.querySelector("input");
-let listElement = document.querySelector("ul");
-let itemElement = listElement.querySelectorAll(".pokemon-card");
-let button_pag1 = document.getElementById("botao_pag1");
-let button_pag2 = document.getElementById("botao_pag2");
-let button_pag3 = document.getElementById("botao_pag3");
-let buttons_pag = document.querySelectorAll(".botao_pag");
+const inputElement = document.querySelector("input");
+const listElement = document.querySelector("ul");
+const itemElement = listElement.querySelectorAll(".pokemon-card");
+const button_pag1 = document.getElementById("botao_pag1");
+const button_pag2 = document.getElementById("botao_pag2");
+const button_pag3 = document.getElementById("botao_pag3");
+const buttons_pag = document.querySelectorAll(".botao_pag");
+const search_button = document.getElementById("search_button");
+const searchInput = document.getElementById("searchInput");
 
 async function displayCards(x, y) {
   const cards = await createCards(x, y);
@@ -83,7 +85,17 @@ button_pag3.addEventListener("click", (event) => {
 buttons_pag.forEach((botao) => {
   botao.addEventListener("click", (event) => {
     event.preventDefault();
-    console.log(buttons_pag);
-    console.log(event.currentTarget);
+    buttons_pag.forEach((botao) => {
+      botao.classList.remove("d_none");
+    });
+    event.currentTarget.classList.add("d_none");
   });
+});
+
+search_button.addEventListener("click", async (event) => {
+  event.preventDefault();
+  const pokeName = searchInput.value.toLowerCase();
+  const pokemon = await requestPokeInfo(pokeName);
+  const Container = document.getElementById("poke_container");
+  Container.innerHTML = createCard(pokemon);
 });
