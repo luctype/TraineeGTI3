@@ -1,0 +1,66 @@
+button {
+  background: #0066a2;
+  color: white;
+  border-style: outset;
+  border-color: #0066a2;
+  height: 30px;
+  width: 80px;
+  font: bold15px arial, sans-serif;
+  text-shadow: none;
+}
+body {
+  background-color: #ffc312;
+  font-family: "Maven Pro", sans-serif;
+}
+
+#container {
+  width: 100%;
+  max-width: 800px;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 2em 0;
+}
+.search {
+  margin-top: 20px;
+}
+#poke_container {
+  width: 180vh;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  flex-wrap: wrap;
+  border: 1px solid #ccc;
+  background-color: white;
+}
+.pokemon-card {
+  width: 100%;
+  margin: 0;
+  padding: 0 30px;
+  /*border: 1px solid #ccc;*/
+  float: left;
+
+  /*box-shadow: 3px 3px 3px 3px;#*/
+}
+.pokemon_info {
+  font-size: 12px;
+}
+li {
+  list-style-type: none;
+}
+#botao {
+  width: 100%;
+  margin: 0 auto;
+  align-items: center;
+  text-align: center;
+}
+#botao_pag {
+  height: 35px;
+  width: 80px;
+}
+.d_none {
+  display: none;
+}
