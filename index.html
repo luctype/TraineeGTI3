@@ -13,11 +13,15 @@
     <main id="container">
         <img id="logo" src="https://upload.wikimedia.org/wikipedia/commons/9/98/International_Pok%C3%A9mon_logo.svg"
             alt="Pokemon Logo">
+        <div id="procurar">
+            <form action="" class="search">
+                <input type="search" id="searchInput" placeholder="Procure seu Pokemon ">
+                <button id="search_button">Search</button>
+            </form>
+            <button onclick="window.location.href = 'party.html'" id="search_button">Party</button>
+        </div>
 
-        <form action="" class="search">
-            <input type="search" id="searchInput" placeholder="Procure seu Pokemon ">
-            <button id="search_button">Search</button>
-        </form>
+
     </main>
     <div id="poke_container">
         <ul id="poke_list">
@@ -33,6 +37,6 @@
 
 
 </body>
-<script src="js/script.js"></script>
+<script type="module" src="js/script.js"></script>
 
 </html>
